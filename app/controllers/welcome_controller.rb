@@ -1,5 +1,9 @@
-class WelcomeController < ApplicationController
+class GroupsController < ApplicationController
   def index
-      flash[:warning] = "这是 warning 讯息！"
-    end
+    @groups = Group.all
+  end
+
++ def new
++   @group = Group.new
++ end
 end
