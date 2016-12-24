@@ -19,8 +19,7 @@ def new
 
 
    def create
-     def create
-    @group = Group.new(group_params)
+       @group = Group.new(group_params)
     @group.user = current_user
 
     if @group.save
@@ -54,5 +53,4 @@ def new
   def group_params
     params.require(:group).permit(:title, :description)
    end
-
-  end
+end
