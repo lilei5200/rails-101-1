@@ -11,7 +11,7 @@ has_many :group_relationships
   def is_member_of?(group)
     participated_groups.include?(group)
      end
-end
+
 
 def join!(group)
     participated_groups << group
@@ -20,3 +20,4 @@ def join!(group)
   def quit!(group)
     participated_groups.delete(group)
   end
+end
